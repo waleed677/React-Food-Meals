@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         
         <a
-          className="App-link"
+          className="App-link text-3xl font-bold "
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
