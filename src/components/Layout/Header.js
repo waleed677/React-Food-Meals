@@ -16,10 +16,11 @@ import {
 } from '@heroicons/react/24/outline'
 
 import logo from '../../assets/images/logo.png'
+import CartIcons from '../Cart/CartIcons'
 
 function Header() {
     return (
-        <Popover className="relative bg-white">
+        <Popover className="relative bg-amber-700">
             <div className="mx-auto  px-4 sm:px-6">
                 <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -39,18 +40,7 @@ function Header() {
                         </Popover.Button>
                     </div>
 
-                    <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-
-                        <a
-                            href="#"
-                            className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                            </svg> &nbsp;
-                            Cart
-                        </a>
-                    </div>
+                   <CartIcons/>
                 </div>
             </div>
 
