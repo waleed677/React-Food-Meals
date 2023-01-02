@@ -13,7 +13,7 @@ function MealsItem(props) {
           <p className=" text-2xl">{price}</p>
         </div>
         <div>
-            <MealsItemForm/>
+            <MealsItemForm data = {props.burger}/>
         </div>
       </li>
     </>
