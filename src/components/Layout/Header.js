@@ -18,7 +18,7 @@ import {
 import logo from '../../assets/images/logo.png'
 import CartIcons from '../Cart/CartIcons'
 
-function Header() {
+function Header(props) {
     return (
         <Popover className="relative bg-amber-700">
             <div className="mx-auto  px-4 sm:px-6">
@@ -40,7 +40,7 @@ function Header() {
                         </Popover.Button>
                     </div>
 
-                   <CartIcons/>
+                   <CartIcons onClick = {props.onCartClick}/>
                 </div>
             </div>
 

@@ -1,7 +1,6 @@
 import React from "react";
 
 function Input(props) {
-  console.log(props);
   return (
     <div className="flex">
       <label className="block text-lg font-medium text-gray-700">
