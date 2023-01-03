@@ -4,6 +4,7 @@ import Header from './components/Layout/Header';
 import Meals from './components/Meals/Meals';
 import Cart from './components/Cart/Cart';
 import { useState } from 'react';
+import ContextProvider from './store/ContextProvider';
 
 function App() {
 
@@ -19,13 +20,13 @@ function App() {
 
 
   return (
-   <>
+   <ContextProvider>
    { cartIsShown && <Cart  onClickClose = {hideCartHandler}/>}
     <Header onCartClick = {showCartHandler}/>
     <main>
       <Meals/>
     </main>
-   </>
+   </ContextProvider>
   );
 }
 

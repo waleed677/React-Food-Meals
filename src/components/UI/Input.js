@@ -1,17 +1,15 @@
 import React from "react";
 
-function Input(props) {
+const Input = React.forwardRef((props, ref) => {
   return (
     <div className="flex">
-      <label className="block text-lg font-medium text-gray-700">
-        {props.label}
-      </label>
       <input
-        className="block w-full rounded-md border-gray-300 pl-7  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+        className=" block rounded-md text-center text-black border-pink-800 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" 
         {...props.data}
+        ref = {ref}
       />
     </div>
   );
-}
+});
 
 export default Input;

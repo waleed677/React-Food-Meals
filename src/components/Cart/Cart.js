@@ -1,12 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../../store/CartContext";
 import MealsItem from "../Meals/MealsItem";
 import Modals from "../UI/Modals";
+import CartItem from "./CartItem";
 
 function Cart(props) {
-  const dummyData = [
-    { id: "m1", name: "Chicken Burrito", amount: 2, price: 975 },
-    { id: "m2", name: "Steak Burrito", amount: 3, price: 945 },
-  ];
+  const cartCTX = useContext(CartContext);
+
+  const cartData = cartCTX.items;
+  const totalAmount = `$${cartCTX.totalAmount}`;
+
+    const cartItemAddHandler = () => {
+
+    }
+
+    
+    const cartItemRemoveHandler = () => {
+        
+    }
+
+  const cartItems = (
+    <ul>
+      {cartData.map((item) => (
+       <CartItem 
+         key={item.id}
+          name={item.name}
+          amount={item.amount}
+          price={item.price}
+          onRemove={cartItemRemoveHandler.bind(null, item.id)}
+          onAdd={cartItemAddHandler.bind(null, item)}
+       />
+      ))}
+    </ul>
+  );
 
   return (
     <>
@@ -24,16 +50,12 @@ function Cart(props) {
                       Cart Items
                     </h3>
                     <div className="mt-5">
-                      <ul>
-                        {dummyData.map((meal) => (
-                          <li key={meal.id} className="p-2 text-lg">{meal.name}</li>
-                        ))}
-                      </ul>
+                      {cartItems}
                     </div>
 
                     <div className="border-t flex justify-between mt-5">
-                        <h2 className="text-2xl font-bold py-4">Total</h2>
-                        <h2 className="text-2xl font-bold py-4">$8.50</h2>
+                      <h2 className="text-2xl font-bold py-4">Total</h2>
+                      <h2 className="text-2xl font-bold py-4">{totalAmount}</h2>
                     </div>
                   </div>
                 </div>
