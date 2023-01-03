@@ -10,13 +10,13 @@ function Cart(props) {
   const cartData = cartCTX.items;
   const totalAmount = `$${cartCTX.totalAmount}`;
 
-    const cartItemAddHandler = () => {
-
+    const cartItemAddHandler = (item) => {
+        cartCTX.addItem({...item, amount:1})
     }
 
     
-    const cartItemRemoveHandler = () => {
-        
+    const cartItemRemoveHandler = (id) => {
+        cartCTX.removeItem(id);
     }
 
   const cartItems = (
