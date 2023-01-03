@@ -1,5 +1,4 @@
-import React, { useContext, useRef } from "react";
-import CartContext from "../../store/CartContext";
+import React, { useRef } from "react";
 import Input from "../UI/Input";
 
 function MealsItemForm(props) {
